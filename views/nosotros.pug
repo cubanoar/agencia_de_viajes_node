@@ -1,0 +1,27 @@
+extends ./layout/index.pug
+
+block contenido 
+    main 
+        div(class="m-8 flex flex-col md:flex-row gap-4 items-center")
+            img(class="rounded shadow-lg shadow-gray-400 sm:h-1/2 sm:w-1/2 mx-2" src="img/nosotros.jpg", alt="nosotros_img")
+
+            div(class="sm:w-1/2 sm:h-1/2 space-y-3") 
+                h1(class="text-2xl font-black text-cyan-600 mb-2") #{page}
+
+                p(class="font-semibold text-lg") Ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget mauris sed nisl vulputate tincidunt. Curabitur iaculis tempor urna. Donec sollicitudin velit in rutrum suscipit. Nulla facilisi. Phasellus vel dolor urna. Quisque at aliquam mi. Vestibulum quam neque, imperdiet in interdum vel, tempor ac mauris. Fusce vestibulum lobortis dui, in gravida elit molestie eget. Nullam hendrerit justo sit amet orci vehicula, sit amet ultrices felis accumsan. Morbi a nisl tempor, dapibus lorem at, iaculis massa. Nunc iaculis posuere dui at lobortis. Quisque luctus erat luctus lectus fringilla tincidunt. Integer euismod sodales velit, ut suscipit tellus ullamcorper nec.
+
+                p(class="font-semibold text-lg")  Laoreet aliquam eros et luctus. Sed ornare posuere elit. Nam et ipsum consequat, imperdiet augue nec, rhoncus augue. Cras eget elementum erat. Sed vel nibh mi. Aliquam vulputate volutpat libero, mollis fermentum ex. Duis sollicitudin nisi eu feugiat viverra. Nam quis sapien sit amet urna volutpat scelerisque a tristique purus. Nam interdum, diam eget faucibus tristique, erat nisl eleifend nisi, id varius mi neque eget justo. Morbi eu dui sem. Curabitur euismod ligula ex, nec vestibulum libero tincidunt eu. In sit amet iaculis nisi, vel commodo risus.
+
+        div(class="md:flex items-center my-8 mx-4 space-y-4") 
+            div(class="md:w-1/3") 
+                img(class="w-1/3 m-auto" src="img/icono_seguridad.svg", alt="img_seguridad")
+                h2(class="font-bold") Seguridad 
+                p(class="font-semibold text-lg") Praesent pellentesque luctus ante, nec interdum lectus fermentum id. Proin erat mauris, sagittis ut magna eget, dapibus dictum dui.
+            div(class="md:w-1/3") 
+                img(class="w-1/3  m-auto" src="img/icono_destinos.svg", alt="img_destinos")
+                h2(class="font-bold") Mejores Destinos 
+                p(class="font-semibold text-lg") Praesent pellentesque luctus ante, nec interdum lectus fermentum id. Proin erat mauris, sagittis ut magna eget, dapibus dictum dui.
+            div(class="md:w-1/3") 
+                img(class="w-1/3 h-1/2 m-auto" src="img/icono_precios.svg", alt="img_precios")
+                h2(class="font-bold") Los Mejores Precios 
+                p(class="font-semibold text-lg") Praesent pellentesque luctus ante, nec interdum lectus fermentum id. Proin erat mauris, sagittis ut magna eget, dapibus dictum dui.

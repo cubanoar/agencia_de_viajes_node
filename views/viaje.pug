@@ -1,0 +1,23 @@
+extends ./layout/index.pug
+
+block contenido 
+    main 
+        h1(class="text-center text-cyan-500 my-4 font-bold text-3xl") #{dataValues.titulo}
+        div(class='m-4 md:mx-44 overflow-hidden') 
+            img(class="md:float-left md:w-2/4 px-0 mr-2" src=`/img/destinos_${dataValues.imagen}.jpg` alt="img_viage")
+            div(class="flex justify-around my-2")
+                div(class="flex items-center") 
+                    svg.icon.icon-tabler.icon-tabler-users(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#00bfd8' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        circle(cx='9' cy='7' r='4')
+                        path(d='M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+                        path(d='M16 3.13a4 4 0 0 1 0 7.75')
+                        path(d='M21 21v-2a4 4 0 0 0 -3 -3.85')
+                    p #{dataValues.disponibles}
+                div(class="flex  items-center") 
+                    svg.icon.icon-tabler.icon-tabler-currency-dollar(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#00bfd8' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        path(d='M16.7 8a3 3 0 0 0 -2.7 -2h-4a3 3 0 0 0 0 6h4a3 3 0 0 1 0 6h-4a3 3 0 0 1 -2.7 -2')
+                        path(d='M12 3v3m0 12v3')
+                    p #{dataValues.precio}
+            p(class="m-2 indent-5 text-justify") #{dataValues.descripcion}

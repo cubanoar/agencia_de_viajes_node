@@ -1,0 +1,20 @@
+extends ./layout/index.pug
+
+block slider
+    img(class='h-screen w-full container mx-auto' src="/img/destinos_rio.jpg", alt="img-rio")
+
+block contenido 
+    main(class="m-4") 
+        h2(class="text-center text-cyan-600 font-black text-2xl mb-4") Tu mejor opción
+        div(class='md:flex justify-center items-center gap-4 mb-4 container mx-auto')
+            p(class='sm:w-1/2 mb-4') Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit pariatur quis asperiores harum ratione consequatur blanditiis fugit quod obcaecati. Necessitatibus dicta corporis sed consectetur eum repellat, dolorem accusantium minus. Ipsum dolor sit amet consectetur, adipisicing elit. Vel iusto repudiandae minus eum, blanditiis rem asperiores architecto mollitia! Mollitia, magni assumenda. Voluptates soluta ullam quo error blanditiis asperiores voluptatem autem.
+            img(class='sm:w-1/2' src="/img/inicio_nosotros.jpg", alt="img_rio_inicio")
+        h2(class="text-center text-cyan-600 font-black text-2xl mb-4") Próximos Viajes 
+        include ./layout/bloque_viajes.pug
+    div(class="md:flex mb-4 bg-[url('/img/cupon.jpg')] bg-cover") 
+        div(class='w-full lg:w-1/2 bg-red flex flex-col justify-center items-center py-8 md:p-44 backdrop-blur-md text-2xl md:text-3xl  font-bold')
+            h3(class="text-red-700 animate-pulse") 10% de Descuento
+            p(class="text-white") Viaje a Canada
+            p(class="text-white") Precio $2,300.00
+        div(class='lg:w-1/2 bg-red')
+       

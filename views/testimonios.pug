@@ -1,0 +1,31 @@
+extends ./layout/index.pug
+
+block contenido 
+    main(class="m-4 flex flex-col items-center justify-center") 
+        h1(class="text-center text-2xl font-black text-cyan-600 my-4") #{page}
+        div(class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5")
+            each testimonio in testimonios 
+                    div(class="bg-white m-2 rounded-md shadow-lg font-semibold p-1") 
+                        img(class="float-left" src="/img/quote.jpg", alt="quote_img")
+                        p(class="mx-auto")= testimonio.mensaje
+                        p(class="text-end text-cyan-600 m-4") - #{testimonio.nombre}
+        h2(class="text-center text-2xl font-bold text-cyan-600 my-4") Dejanos tú testimonio
+        div(class='w-full md:w-2/3 lg:w-2/4')
+            form(class='mx-auto' action="/testimonios", method="post") 
+                fieldset(class="border border-gray-400 p-3 rounded-md bg-white")
+                    legend(class="font-semibold text-white text-xl bg-cyan-600 rounded-full px-3") Informacion Personal
+                    div(class='w-full flex flex-col mb-2')
+                        label(for="nombre") Nombre 
+                        input#nombre(class="bg-gray-200 rounded-xl pl-2 outline-0"  type="text", name="nombre", placeholder="Nombre completo" value= nombre ) 
+                    div(class='w-full flex flex-col mb-2')    
+                        label(for="correo") Correo    
+                        input#nombre(class="bg-gray-200 rounded-xl pl-2 outline-0"  type="email", name="correo", placeholder="Correo", value= correo) 
+                    div(class='flex flex-col mb-4')    
+                        div 
+                            label( for="mensaje") Mensaje 
+                            small(class="text-red-500") (Hasta 150 caracteres) 
+                        textarea#mensaje(class="bg-gray-200 rounded-xl pl-2" name="mensaje", cols="10", rows="5")= mensaje  
+                    div(class='grid grid-cols-3') 
+                        input(class='col-start-2 col-span-1 bg-red-500 rounded w-full mb-2 text-white font-semibold cursor-pointer' type="submit", value="Enviar" )
+        if(error)
+            p(class="text-center rounded-md text-red-500 my-2") #{error}
